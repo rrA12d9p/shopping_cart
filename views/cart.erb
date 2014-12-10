@@ -1,0 +1,27 @@
+<p>Here is your shopping cart so far:</p>
+
+<!-- Show what's in the user's cart -->
+<table>
+	<tr>
+	    <th>Product Image</th>
+	    <th>Product Name</th>
+	    <th>Quantity</th>
+	</tr>
+
+	<% session[:cart].each do |product| %>
+		<% id = product[:pid] %>
+		<% quant = product[:quant] %>
+
+		<% db_product = Product.find(id) %>
+		<% img = db_product.image %>
+
+		<% name = db_product.product_name %>
+
+		<tr>
+			<td><img class=product-img src="<%= img %>"></td>
+			<td><%=name%></td>
+			<td><%=quant%></td>
+		</tr>
+
+	<% end %>
+</table>

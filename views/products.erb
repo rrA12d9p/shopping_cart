@@ -1,0 +1,8 @@
+<!-- Show all of the products, along with a button to add each one to a user's cart -->
+<form action="/cart/products" method="post">
+	<ul>
+		<% @products.each do |product| %>
+			<li> <button type="submit" name="product_id" value="<%=product.id%>">Add to cart</button><%= product.product_name %></li> 
+		<% end %>
+	</ul>
+</form>

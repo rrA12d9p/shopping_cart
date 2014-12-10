@@ -1,0 +1,23 @@
+.product-img {
+  max-height: 100px;
+  max-width: 100px;
+  display: block;
+}
+
+body tr:nth-child(odd) {
+  background: #eee;
+}
+
+body tr th {
+	background: #fff;
+}
+
+td {
+	text-align: center;
+	padding: 10px;
+	border: 1px solid gray;
+}
+
+table {
+	border-collapse: collapse;
+}

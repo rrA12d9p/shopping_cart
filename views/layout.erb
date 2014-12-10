@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to the Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/cart">Cart (<%=session[:cart].length%>)</a></li>
+          <li><a href="/session/logout">Empty Cart</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <%= yield %>
+
+  </body>
+</html>
